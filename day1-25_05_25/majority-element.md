@@ -126,7 +126,7 @@ public int majorityElement(int[] nums) {
         }
     }
 
-    // verify majority element (step not if it is mentioned, majority element exists for sure)
+    // verify majority element (step not required if it is mentioned, majority element exists for sure)
     count = 0;
     for(int ele: nums){
         if(ele == majorityElement) count++;
