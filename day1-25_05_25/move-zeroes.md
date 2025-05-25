@@ -1,13 +1,13 @@
 # [Leetcode 283: Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 ## Approaches:
-1. [Brute Force Move and Shift](#1-brute-force-move-and-shift)
-2. [Two-Pointer Approach](#2-two-pointer-approach)
-3. [Optimized In-Place Zero Fill](#3-optimized-in-place-zero-fill)
+1. [Brute Force Move and Shift](#approach-1-brute-force-move-and-shift)
+2. [Two-Pointer Approach](#approach-2-two-pointer-approach)
+3. [Optimized In-Place Zero Fill](#approach-3-optimized-in-place-zero-fill)
 
 ---
 
-### 1. Brute Force Move and Shift
+### Approach 1: Brute Force Move and Shift
 
 #### Intuition:
 - The brute force approach involves iterating through the array and shifting non-zero elements
@@ -46,7 +46,7 @@ public void moveZeroes(int[] nums) {
 
 ---
 
-### 2. Two-Pointer Approach
+### Approach 2: Two-Pointer Approach
 
 #### Intuition:
 - A more efficient approach uses the two-pointer technique. One pointer keeps track of the
@@ -82,7 +82,7 @@ public void moveZeroes(int[] nums) {
 
 ---
 
-### 3. Optimized In-Place Zero Fill
+### Approach 3: Optimized In-Place Zero Fill
 
 #### Intuition:
 - We can fine-tune our previous two-pointer approach by swapping in place.
