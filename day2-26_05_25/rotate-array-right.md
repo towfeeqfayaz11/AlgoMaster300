@@ -125,3 +125,31 @@ class Solution {
 **Time Complexity:** O(n) - Each reverse operation is O(n), and we perform a constant number of them.
 
 **Space Complexity:** O(1) - Reversal done in-place without extra space.
+
+Also if we want to rotate left we can use below improvement in above approach
+
+```java
+class Solution {
+    public void rotateLeft(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n; // Handle cases where k >= n
+
+        // Step 1: Reverse the whole array
+        reverse(nums, 0, n - 1);
+        // Step 2: Reverse the first n-k-1 elements
+        reverse(nums, 0, n - k - 1);
+        // Step 3: Reverse the remaining n-k to n-1 elements
+        reverse(nums, n-k, n - 1);
+    }
+
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+```
